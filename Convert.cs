@@ -1,9 +1,9 @@
- public class Convert
+public class Convert
     {
         public string Text { get; set; }
         public string ConvertedText { get; set; }
         
-        public readonly Dictionary<char, int> keys = new Dictionary<char, int>()
+        public static readonly Dictionary<char, int> keys = new Dictionary<char, int>()
         {
             {'a',11},{'A',11},
             {'b',22 },{'B',22 },
@@ -40,7 +40,7 @@
             {
                 if(text.Contains(ch))
                 {
-                    text.Replace(ch, char.Parse(keys[ch].ToString()));
+                    text.Replace(ch.ToString(), keys[ch].ToString());
                 }
             }
 
